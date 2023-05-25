@@ -1,30 +1,61 @@
+body {
+  font-family: sans-serif;
+}
+
 h1 {
   color: #2f4f4f;
   margin-bottom: 10px;
 }
 
-#main-nav {
+.nav {
   margin-top: 10px;
   list-style: none;
   padding-left: 0;
 }
 
-#main-nav li {
+.nav li {
   display: inline-block;
 }
 
-#main-nav a {
+.nav .featured {
+  background-color: orange;
+  box-shadow: 10px 5px #6f9090;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+.nav a {
   color: white;
   background-color: #13a4a4;
-  padding: 5px;
+  padding: 5px 15px; 
   border-radius: 2px;
   text-decoration: none;
 }
 
-#page-title {
-  font-family: sans-serif;
+.footer {
+  color: #666;
+  background-color: #ccc;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
 }
 
-.featured {
-  background-color: orange;
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
 }

@@ -1,0 +1,39 @@
+:root {
+  font-size: calc(0.5em + 1vw);
+}
+
+body {
+  line-height: 1.2;
+}
+
+.panel {
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 1px solid #999;
+}
+
+.square {
+  width: 90vmin;
+  height: 90vmin;
+  background-color: #369;
+}
+
+.about-us {
+  font-size: 2em;
+}
+
+.panel.large {
+  font-size: 1.2rem;
+}
+
+.panel.small {
+  font-size: 0.8rem;
+}
+
+.panel>h2 {
+  margin-top: 0;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+}

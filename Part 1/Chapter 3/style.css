@@ -24,10 +24,6 @@ header {
   padding: 1em 1.5em;
 }
 
-main {
-  display: block;
-}
-
 .container {
   display: flex;
 }

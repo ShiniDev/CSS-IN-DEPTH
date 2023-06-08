@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+}
+
+@media (max-width: 30em) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  tr,
+  td {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 1em;
+  }
+}

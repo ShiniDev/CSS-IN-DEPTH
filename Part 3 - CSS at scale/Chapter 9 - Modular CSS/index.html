@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="message message--error text-center">
+    Save successful
+  </div>
+  <button class="button">Module</button>
+  <button class="button button--large">Read more</button>
+  <button class="button button--success">Save</button>
+  <button class="button button--danger button--large">Cancel</button>
+  <div class="media">
+    <img src="runner.png" alt="A runner" class="media__image">
+    <div class="media__body">
+      <h4>Strength</h4>
+      <p>
+        Strength training is an important part of injury prevention. Focus on your core&mdash; especially your abs and
+        glutes.
+      </p>
+    </div>
+  </div>
+  <div class="media media--right">
+    <img src="runner.png" alt="A runner" class="media__image float-left">
+    <div class="media__body">
+      <h4>Strength</h4>
+      <p>
+        Strength training is an important part of injury prevention. Focus on your core&mdash; especially your abs and
+        glutes.
+      </p>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropdown__toggle">Main Menu</button>
+    <div class="dropdown__drawer">
+      <ul class="menu">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Coffees">Coffees</a></li>
+        <li><a href="#Brewers">Brewers</a></li>
+        <li><a href="#Specials">Specials</a></li>
+        <li><a href="#About">About Ussssssss</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const toggle = document.querySelector('.dropdown__toggle');
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.classList.toggle('is-open');
+      });
+    })();
+  </script>
+</body>
+
+</html>

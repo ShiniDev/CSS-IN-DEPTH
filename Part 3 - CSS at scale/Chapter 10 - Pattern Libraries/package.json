@@ -1,0 +1,16 @@
+{
+  "name": "chapter-10---pattern-libraries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "kss --config kss-config.json"
+  },
+  "keywords": [],
+  "author": "ShiniDev",
+  "license": "ISC",
+  "devDependencies": {
+    "kss": "^3.1.0"
+  }
+}

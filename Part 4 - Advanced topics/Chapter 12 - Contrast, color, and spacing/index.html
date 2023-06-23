@@ -59,7 +59,7 @@
           Whether you work on a team of three or a three hundred, you'll find
           our tiered pricing reasonable at every level.
         </p>
-        <a href="#read-more-3" class="button">Read more</a>
+        <a href="#" class="button">Read more</a>
       </div>
     </div>
   </div>
@@ -69,6 +69,16 @@
       Copyright &copy; 2023 Ink, Inc.
     </div>
   </footer>
+  <script>
+    const pageFooter = document.querySelector(".page-footer");
+    function check() {
+      let viewportHeight = window.innerHeight;
+      let pageFooterOffset = pageFooter.getBoundingClientRect().top + window.pageYOffset;
+      let remaining = viewportHeight - pageFooterOffset;
+      pageFooter.style.marginTop = remaining + "px";
+    }
+    check();
+  </script>
 </body>
 
 </html>

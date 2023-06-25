@@ -1,0 +1,62 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: hsl(180, 50%, 50%);
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  padding: .3em 1em;
+  transition: border-radius .3s linear, background-color .6s ease;
+}
+
+button:hover {
+  background-color: hsl(0, 50%, 50%);
+  border-radius: 1em;
+}
+
+.container {
+  position: relative;
+  height: 150px;
+  outline: 1px red solid;
+}
+
+.box-container {
+  position: relative;
+  height: 30px;
+}
+
+.box {
+  position: absolute;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: hsl(130, 50%, 50%);
+}
+
+.box--linear {
+  transition: all 1s linear;
+}
+
+.box--ease {
+  transition: all 1s ease;
+}
+
+.box--ease-in {
+  transition: all 1s ease-in;
+}
+
+.box--ease-out {
+  transition: all 1s ease-out;
+}
+
+.box--ease-in-out {
+  transition: all 1s ease-in-out;
+}
+
+.container:hover .box {
+  left: calc(100% - 30px);
+}

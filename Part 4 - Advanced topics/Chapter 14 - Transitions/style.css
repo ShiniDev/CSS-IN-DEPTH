@@ -4,16 +4,20 @@
   box-sizing: border-box;
 }
 
-button {
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.test-button {
   background-color: hsl(180, 50%, 50%);
   border: 0;
   color: white;
   font-size: 1rem;
   padding: .3em 1em;
-  transition: border-radius .3s linear, background-color .6s ease;
+  transition: all 1s steps(3, start);
 }
 
-button:hover {
+.test-button:hover {
   background-color: hsl(0, 50%, 50%);
   border-radius: 1em;
 }
@@ -27,9 +31,11 @@ button:hover {
 .box-container {
   position: relative;
   height: 30px;
+  text-align: center;
 }
 
 .box {
+  display: inline;
   position: absolute;
   left: 0;
   height: 30px;
@@ -38,25 +44,86 @@ button:hover {
 }
 
 .box--linear {
-  transition: all 1s linear;
+  transition: all 2s linear;
 }
 
 .box--ease {
-  transition: all 1s ease;
+  transition: all 2s ease;
 }
 
 .box--ease-in {
-  transition: all 1s ease-in;
+  transition: all 2s ease-in;
 }
 
 .box--ease-out {
-  transition: all 1s ease-out;
+  transition: all 2s ease-out;
 }
 
 .box--ease-in-out {
-  transition: all 1s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .container:hover .box {
   left: calc(100% - 30px);
+}
+
+.dropdown__toggle {
+  display: block;
+  padding: 0.5em 1em;
+  border: 1px solid hsl(280, 10%, 80%);
+  color: hsl(280, 30%, 60%);
+  background-color: white;
+  font: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s linear;
+}
+
+.dropdown__toggle:hover {
+  background-color: hsl(280, 15%, 95%);
+}
+
+.dropdown__drawer {
+  position: absolute;
+  /* display: none; */
+  background-color: white;
+  width: 10em;
+  /* opacity: 0;
+  visibility: hidden; */
+  height: 0;
+  overflow: hidden;
+  /* transition: opacity 0.2s linear, visibility 0s linear 0.2s; */
+  transition: height 0.3s ease-out;
+}
+
+.dropdown.is-open .dropdown__drawer {
+  /* display: block; */
+  /* opacity: 1; */
+  /* visibility: visible;
+  transition-delay: 0s; */
+  /* height: auto; */
+}
+
+.menu {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu>li+li>a {
+  border-top: 0;
+}
+
+.menu>li>a {
+  display: block;
+  padding: 0.5em 1em;
+  color: hsl(280, 40%, 60%);
+  background-color: white;
+  text-decoration: none;
+  transition: all .2s linear;
+  border: 1px solid hsl(280, 10%, 80%);
+}
+
+.menu>li>a:hover {
+  background-color: hsl(280, 15%, 95%);
+  color: hsl(280, 25%, 10%);
 }

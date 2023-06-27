@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perspective</title>
+  <link rel="stylesheet" href="perspective.css">
+</head>
+
+<body>
+  <div class="row">
+    <div class="box">One</div>
+    <div class="box">Two</div>
+    <div class="box">Three</div>
+    <div class="box">Four</div>
+  </div>
+
+  <script>
+    document.addEventListener('keydown', (e) => {
+      // Add detection for keys w,a,s,d
+      let row = document.querySelector('.row');
+      row = getComputedStyle(row);
+      let perspective = parseInt(row.perspective.slice(0, -2));
+      let perspectiveOrigin = row.perspectiveOrigin.split(' ');
+      let perspectiveOriginX = parseInt(perspectiveOrigin[0].slice(0, -2));
+      let perspectiveOriginY = parseInt(perspectiveOrigin[1].slice(0, -2));
+      if (e.key === 'w') {
+        perspective += 50;
+        document.querySelector('.row').style.perspective = perspective + 'px';
+      } else if (e.key === 'a') {
+        perspectiveOriginX -= 50;
+        document.querySelector('.row').style.perspectiveOrigin = perspectiveOriginX + 'px ' + perspectiveOriginY + 'px';
+      } else if (e.key === 's') {
+        perspective -= 50;
+        document.querySelector('.row').style.perspective = perspective + 'px';
+      } else if (e.key === 'd') {
+        perspectiveOriginX += 50;
+        document.querySelector('.row').style.perspectiveOrigin = perspectiveOriginX + 'px ' + perspectiveOriginY + 'px';
+      }
+    });
+  </script>
+</body>
+
+</html>

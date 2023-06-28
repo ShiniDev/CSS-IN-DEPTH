@@ -1,0 +1,99 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+form {
+  max-width: 500px;
+}
+
+label,
+textarea {
+  display: block;
+  margin-bottom: 1em;
+}
+
+textarea {
+  width: 100%;
+  font-size: inherit;
+}
+
+button {
+  padding: 0.6em 1em;
+  border: 0;
+  background-color: hsl(220, 50%, 50%);
+  color: white;
+  font: inherit;
+  transition: background-color 0.3s linear;
+}
+
+button:hover {
+  background-color: hsl(220, 45%, 40%);
+}
+
+button.is-loading {
+  position: relative;
+  color: transparent;
+}
+
+button.is-loading::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  /* top: 50%;
+  left: 50%;
+  margin-left: -0.7em;
+  margin-top: -0.7em; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shake {
+  animation: shake 0.7s linear;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-0.4em);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(0.4em);
+  }
+
+  80% {
+    transform: translateX(0.3em);
+  }
+
+  90% {
+    transform: translateX(-0.3em);
+  }
+}

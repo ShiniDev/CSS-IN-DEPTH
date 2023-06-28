@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <form action="">
+    <label for="trip">Tell us about your first trip to the zoo:</label>
+    <textarea name="about-my-trip" id="trip" rows="5"></textarea>
+    <button type="submit" id="submit-button">Save</button>
+  </form>
+
+  <script>
+    const input = document.querySelector('#trip');
+    const submitButton = document.querySelector('#submit-button');
+
+    let timeout = null;
+
+    submitButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      clearTimeout(timeout);
+      submitButton.classList.add('is-loading');
+      submitButton.disabled = true;
+      input.disabled = true;
+    });
+
+    input.addEventListener('keyup', (e) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        submitButton.classList.add('shake');
+      }, 1000);
+    });
+    submitButton.addEventListener('animationend', (e) => {
+      submitButton.classList.remove('shake');
+    });
+  </script>
+</body>
+
+</html>
